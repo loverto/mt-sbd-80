@@ -48,6 +48,7 @@ window.addEventListener('DOMContentLoaded', () => {
     textConfigMap.set('textFilePathText','textFilePath');
     textConfigMap.set('modelFilePathText','modelFilePath');
     textConfigMap.set('pchText','pch');
+    textConfigMap.set('codeText','code');
 
     function $(id){
         return document.getElementById(id);
@@ -81,6 +82,7 @@ window.addEventListener('DOMContentLoaded', () => {
             modelFilePathText.value = configObject.modelFilePath;
             exportModelFilePathText.value = configObject.exportModelFilePath;
             pchText.value = configObject.pch;
+            codeText.value = configObject.code;
         }
     })
 
@@ -93,7 +95,8 @@ window.addEventListener('DOMContentLoaded', () => {
         exportModelFilePath:null,
         modelFilePath:null,
         textFilePath:null,
-        pch:null
+        pch:null,
+        code:null
     };
 
     let imageFilePathBtn = $('imageFilePathBtn');
@@ -165,8 +168,9 @@ window.addEventListener('DOMContentLoaded', () => {
     const modelFilePathText = $('modelFilePathText');
     const exportModelFilePathText = $('exportModelFilePathText');
     const pchText = $('pchText');
+    const codeText = $('codeText');
 
-    let textArray = [imageFilePathText,textFilePathText,modelFilePathText,exportModelFilePathText,pchText];
+    let textArray = [imageFilePathText,textFilePathText,modelFilePathText,exportModelFilePathText,pchText,codeText];
 
 
     /**
@@ -204,6 +208,7 @@ window.addEventListener('DOMContentLoaded', () => {
         modelFilePathText.value = configObject.modelFilePath;
         exportModelFilePathText.value = configObject.exportModelFilePath;
         pchText.value = configObject.pch;
+        codeText.value = configObject.code;
     }
 
     const start = $('start');
@@ -225,7 +230,8 @@ window.addEventListener('DOMContentLoaded', () => {
                 textFilePath: textFilePathText.value,
                 modelFilePath: modelFilePathText.value,
                 exportModelFilePath: exportModelFilePathText.value,
-                pch:pchText.value
+                pch:pchText.value,
+                code:codeText.value
             }
             db.set('configObject', configObject)
         }

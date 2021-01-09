@@ -1,0 +1,12 @@
+{
+  "presets": [
+    ["@babel/preset-env",  {
+      "modules": false //默认都是支持 CommonJS
+    }]
+  ],
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    "@babel/syntax-dynamic-import",
+    "@babel/proposal-function-bind"
+  ]
+}

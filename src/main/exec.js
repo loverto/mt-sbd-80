@@ -12,9 +12,5 @@ function main() {
     })
 }
 
-process.on("startUp", function (data) {
-    if (data == 1) {
-        main();
-    }
-})
+main();
 

@@ -178,7 +178,7 @@ function createWindow() {
             nodeIntegration: true
         }
     })
-
+    log.info("process_node_env:"+process.env.NODE_ENV);
     if (process.env.NODE_ENV === 'production') {
         mainWindow.loadFile(path.resolve(__dirname, `index.html`)).catch(console.error);
     }else {
